@@ -82,13 +82,13 @@ chrome.webRequest.onBeforeSendHeaders.addListener(
       exists = false;
       if (details.requestHeaders[i].name.toLowerCase() == 'origin') {
       	exists = true;
-      	details.requestHeaders[i].value = 'http://evil.163.com';
+      	details.requestHeaders[i].value = 'http://evil.aaa163.com';
         //details.requestHeaders.splice(i, 1);
         break;
       }
     }
     if (!exists) {
-    	details.requestHeaders.push({ name: 'Origin', value: 'http://evil.163.com'});
+    	details.requestHeaders.push({ name: 'Origin', value: 'http://evil.aaa163.com'});
     }
     return {requestHeaders: details.requestHeaders};
   },
