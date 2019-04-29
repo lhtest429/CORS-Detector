@@ -139,7 +139,7 @@ chrome.webRequest.onResponseStarted.addListener(function(details){
 	 flag1 = 0;
 	 flag2 = 0;
      for (var i = 0; i < details.responseHeaders.length; ++i) {
-    	if (details.statusCode == 200 && details.responseHeaders[i].name.toLowerCase() === 'access-control-allow-origin' && details.responseHeaders[i].value == 'http://evil.163.com') {
+    	if (details.statusCode == 200 && details.responseHeaders[i].name.toLowerCase() === 'access-control-allow-origin' && details.responseHeaders[i].value == 'http://evil.aaa163.com') {
     		if (isJSON(getLocalFileUrl(details.url)))
     		{
     			console.log(details.url);
